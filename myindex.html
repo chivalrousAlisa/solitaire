@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no" />
+    <title>Solitaire</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        .fn-hide{
+            display: none;
+        }
+        #titleContainer{
+            overflow: hidden;
+            background-color:#286090;
+            padding:15px 0;
+            color:#44f6f6;
+        }
+        .score{
+            float: left;
+            padding-left:10px;
+        }
+        .timer{
+            float: right;
+            padding-right:30px;
+        }
+    </style>
+    <script src="../../Solitaire_Html/js/jquery.js"></script>
+    <script src="../../Solitaire_Html/js/jquery.easing.1.3.min.js"></script>
+</head>
+<body>
+    <div id="titleContainer">
+        <div class="score">Score:<span id="score">0</span></div>
+        <div class="timer">Timer:<span id="timer">00:00:00</span></div>
+    </div>
+    <div id="deskTop">
+        <canvas id="canvasBack"></canvas>
+        <canvas id="canvasFont"></canvas>
+    </div>
+    <div id="messageBox" class="fn-hide">
+        <div id="message">
+            Show something here!
+        </div>
+        <div id="messageBoxConfirm">OK</div>
+    </div>
+    <div id="cmdBox">
+        <input id="cmd" type="text" />
+    </div>
+</body>
+<script>
+    var game = {
+        init:function(){
+            this.initPage();
+        },
+        initPage:function(){
+            //牌面区域的高度
+            var deskHeight = document.body.clientHeight-$("#titleContainer").get(0).clientHeight;
+            $("#deskTop").css("height",deskHeight);
+        }
+    }
+    game.init();
+</script>
+</html>
