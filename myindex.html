@@ -6,8 +6,8 @@
     <meta name="format-detection" content="email=no" />
     <meta name="format-detection" content="address=no" />
     <title>Solitaire</title>
-    <script src="./js/jquery.js"></script>
-    <script src="./js/jquery.easing.1.3.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.min.js"></script>
 </head>
 <body>
     <div id="titleContainer">
@@ -75,7 +75,7 @@
         var gameInterval;
         var isGameFinished = false;
         var audio = document.createElement("audio");
-        audio.src = "./voice/dealVoice.mp3";
+        audio.src = "voice/dealVoice.mp3";
 
         var Pile = function (index, position, offsetX, offsetY)
         {
@@ -118,7 +118,7 @@
 
         function LoadCardImage()
         {
-            var backBitmapUrl = "./image/poker/back.png";
+            var backBitmapUrl = "image/poker/back.png";
             backImg = document.createElement("img");
             $(backImg).load(function ()
             {
@@ -132,7 +132,7 @@
             backImg.src = backBitmapUrl;
             for (var i = 0; i < 4; i++)
             {
-                var cardTypeDir = "./image/poker/" + cardColors[i] + "/";
+                var cardTypeDir = "image/poker/" + cardColors[i] + "/";
                 for (var j = 0; j < 13; j++)
                 {
                     var cardIndexName = cardIndexs[j];
